@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="default_margin">16dp</dimen>
+    <dimen name="quarter_default_margin">4dp</dimen>
+    <dimen name="half_default_margin">8dp</dimen>
+    <dimen name="double_default_margin">32dp</dimen>
+    <dimen name="triple_default_margin">48dp</dimen>
+
+</resources>
