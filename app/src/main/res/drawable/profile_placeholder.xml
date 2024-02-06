@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+            <corners android:radius="@dimen/half_default_margin" />
+            <solid android:color="@color/grey" />
+
+        </shape>
+
+    </item>
+
+    <item
+        android:bottom="@dimen/half_default_margin"
+        android:drawable="@drawable/ic_profile"
+        android:end="@dimen/half_default_margin"
+        android:start="@dimen/half_default_margin"
+        android:top="@dimen/half_default_margin" />
+
+    <item
+        android:drawable="@drawable/ic_edit"
+        android:end="@dimen/quarter_default_margin"
+        android:bottom="@dimen/quarter_default_margin"
+        android:gravity="bottom|end|center_horizontal" />
+
+</layer-list>
