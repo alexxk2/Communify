@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Communify</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--general-->
+    <string name="contacts">Контакты</string>
+    <string name="home">Главная</string>
+    <string name="profile">Профиль</string>
+
 </resources>
