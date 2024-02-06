@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+
+    >
+    <item>
+        <shape android:shape="oval">
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+
+            <solid android:color="@color/grey" />
+
+        </shape>
+
+    </item>
+
+    <item
+        android:bottom="@dimen/half_default_margin"
+        android:drawable="@drawable/ic_copy"
+        android:end="@dimen/half_default_margin"
+        android:start="@dimen/half_default_margin"
+        android:top="@dimen/half_default_margin" />
+
+</layer-list>

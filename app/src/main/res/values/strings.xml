@@ -8,4 +8,59 @@
     <string name="home">Главная</string>
     <string name="profile">Профиль</string>
 
+    <!--start screen-->
+    <string name="welcome_message">Добро пожаловать в Communify</string>
+    <string name="welcome_message_subtitle">Управляй своими контактами с удовольствием</string>
+    <string name="enter">Войти</string>
+    <string name="join_now">Присоединиться</string>
+    <string name="continue_as_a_guest">Продолжить как гость</string>
+
+    <!--login-->
+    <string name="entrance">Вход</string>
+    <string name="registration">Регистрация</string>
+    <string name="login">Логин</string>
+    <string name="password">Пароль</string>
+    <string name="register">Зарегистрироваться</string>
+
+    <!--contacts-->
+    <string name="see_all">Смотреть всех</string>
+    <string name="gentlemen">Господа</string>
+    <string name="ladies">Дамы</string>
+    <string name="error_no_data">Что-то пошло не так, не удалось получить данные</string>
+    <string name="error_too_much_filter">По выбранным тегам ничего не найдено</string>
+    <string name="update">Обновить</string>
+    <string name="mock_name_and_last_name">Lucy Mozart</string>
+    <string name="mock_city">Saint-Petersburg</string>
+
+    <!--details-->
+    <string name="mock_name">Lucy</string>
+    <string name="mock_last_name">Mozart</string>
+    <string name="mock_phone">+7 911 888 12 68</string>
+    <string name="mock_address">125 Nevsky street, Saint-Petersburg, Russia</string>
+    <string name="mock_email">example@gmail.com</string>
+    <string name="first_name">имя</string>
+    <string name="last_name">фамилия</string>
+    <string name="phone_number">телефон</string>
+    <string name="address">адрес</string>
+    <string name="email">email</string>
+    <string name="back_to_contacts">Вернуться в контакты</string>
+
+    <!--home-->
+    <string name="placeholder_text">Скоро мы добавим много интересного контента</string>
+
+    <!--profile-->
+    <string name="you_have_not_entered">Вы не вошли в приложение</string>
+    <string name="you_have_not_entered_subtitle">Чтобы получить доступ ко всем возможностям приложения необходимо войти</string>
+
+
+    <!--content descriptions-->
+    <string name="description_start">This is an image of phone on table</string>
+    <string name="description_avatar">This is an avatar image</string>
+    <string name="description_phone">This is a phone image</string>
+    <string name="description_mail">This is an email image</string>
+    <string name="description_copy">This is a copy image</string>
+    <string name="description_image">This is just a beautiful image</string>
+    <string name="description_home">This is a home placeholder image</string>
+    <string name="description_back">This is a back arrow image</string>
+
 </resources>
