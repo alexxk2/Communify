@@ -1,12 +1,13 @@
 package com.example.communify.domain.repositories
 
-import android.net.Uri
+import com.example.communify.domain.models.Credentials
 
 interface ProfileRepository {
 
-    suspend fun changeName(newName: String)
-    suspend fun changeProfileImage(newImage: Uri?)
-    suspend fun changeLogin(newLogin: String)
-    suspend fun changePassword(newPassword: String)
+    suspend fun changeName(userCredentials: Credentials)
+    suspend fun changeProfileImage(userCredentials: Credentials)
+    suspend fun changeLogin(userCredentials: Credentials)
+    suspend fun changePassword(userCredentials: Credentials)
+    suspend fun deleteAccount(userCredentials: Credentials)
 
 }

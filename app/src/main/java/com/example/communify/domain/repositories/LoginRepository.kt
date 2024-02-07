@@ -5,7 +5,8 @@ import com.example.communify.domain.models.AuthResult
 
 interface LoginRepository {
 
-  suspend fun login(userCredentials: Credentials): AuthResult
-  suspend fun signIn(userCredentials: Credentials): AuthResult
-  suspend fun guestEntrance()
+    suspend fun login(login: String, password: String): AuthResult
+    suspend fun signIn(userCredentials: Credentials): AuthResult
+    suspend fun guestEntrance()
+
 }

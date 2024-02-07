@@ -6,7 +6,6 @@ data class User(
     val gender: String,
     val location: Location,
     val name: Name,
-    val password: String,
     val phone: String,
     val picture: Picture,
     val username: String,
