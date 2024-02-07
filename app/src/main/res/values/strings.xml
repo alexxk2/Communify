@@ -21,6 +21,7 @@
     <string name="login">Логин</string>
     <string name="password">Пароль</string>
     <string name="register">Зарегистрироваться</string>
+    <string name="name">Имя</string>
 
     <!--contacts-->
     <string name="see_all">Смотреть всех</string>

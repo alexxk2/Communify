@@ -36,9 +36,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/default_margin"
-        app:layout_constraintBottom_toTopOf="@+id/ti_last_name"
+        app:layout_constraintBottom_toTopOf="@+id/ti_login"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_title"
+        app:layout_constraintTop_toBottomOf="@+id/btn_back"
         app:layout_constraintVertical_chainStyle="packed">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -46,11 +46,30 @@
             style="@style/EditText"
             android:layout_width="match_parent"
             android:layout_height="@dimen/triple_default_margin"
+            android:hint="@string/name" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ti_login"
+        style="@style/TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/double_default_margin"
+        app:layout_constraintBottom_toTopOf="@+id/ti_password"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ti_first_name"
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_login"
+            style="@style/EditText"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/triple_default_margin"
             android:hint="@string/login" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/ti_last_name"
+        android:id="@+id/ti_password"
         style="@style/TextInputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -58,10 +77,10 @@
         app:endIconMode="password_toggle"
         app:layout_constraintBottom_toTopOf="@+id/btn_login"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ti_first_name">
+        app:layout_constraintTop_toBottomOf="@+id/ti_login">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/et_last_name"
+            android:id="@+id/et_password"
             style="@style/EditText"
             android:layout_width="match_parent"
             android:layout_height="@dimen/triple_default_margin"
@@ -80,7 +99,7 @@
         android:text="@string/enter"
         android:textAppearance="@style/ButtonText"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ti_last_name"
+        app:layout_constraintTop_toBottomOf="@+id/ti_password"
         tools:layout_editor_absoluteX="16dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
