@@ -22,6 +22,8 @@
     <string name="password">Пароль</string>
     <string name="register">Зарегистрироваться</string>
     <string name="name">Имя</string>
+    <string name="ok">ОК</string>
+
 
     <!--contacts-->
     <string name="see_all">Смотреть всех</string>
@@ -45,6 +47,11 @@
     <string name="address">адрес</string>
     <string name="email">email</string>
     <string name="back_to_contacts">Вернуться в контакты</string>
+    <string name="message_title">Сообщение о добавлении в контакты</string>
+    <string name="email_copied">Email скопирован</string>
+    <string name="phone_copied">Телефонный номер скопирован</string>
+    <string name="address_copied">Адресс скопирован</string>
+    <string name="hello_message">Привет, как дела?</string>
 
     <!--home-->
     <string name="placeholder_text">Скоро мы добавим много интересного контента</string>
@@ -52,6 +59,13 @@
     <!--profile-->
     <string name="you_have_not_entered">Вы не вошли в приложение</string>
     <string name="you_have_not_entered_subtitle">Чтобы получить доступ ко всем возможностям приложения необходимо войти</string>
+    <string name="delete_account">Удалить аккаунт</string>
+    <string name="delete_profile">Удалить профиль</string>
+    <string name="are_you_sure_delete_profile">Вы действительно хотите удалить профиль</string>
+    <string name="cancel">Отмена</string>
+    <string name="delete">Удалить</string>
+    <string name="profile_updated">Данные профиля успешно обновлены</string>
+
 
 
     <!--content descriptions-->

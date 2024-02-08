@@ -8,18 +8,6 @@
     tools:context=".presentation.profile.ui.ProfileFragment">
 
 
-    <ImageButton
-        android:id="@+id/btn_back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/default_margin"
-        android:background="?android:attr/selectableItemBackgroundBorderless"
-        android:contentDescription="@string/description_back"
-        android:src="@drawable/ic_back"
-        app:layout_constraintBottom_toBottomOf="@+id/tv_title"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tv_title" />
-
     <TextView
         android:id="@+id/tv_title"
         style="@style/Title"
@@ -33,12 +21,11 @@
 
     <ImageView
         android:id="@+id/iv_avatar"
-        android:layout_width="@dimen/sixth_default_margin"
-        android:layout_height="@dimen/sixth_default_margin"
+        android:layout_width="@dimen/usual_image_small_size"
+        android:layout_height="@dimen/usual_image_small_size"
         android:layout_marginTop="@dimen/sixth_default_margin"
         android:background="@drawable/profile_placeholder"
         android:contentDescription="@string/description_avatar"
-        android:padding="@dimen/half_default_margin"
         android:scaleType="centerCrop"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
@@ -57,19 +44,19 @@
         app:layout_constraintTop_toBottomOf="@id/iv_avatar" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/ti_first_name"
+        android:id="@+id/ti_login"
         style="@style/TextInputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/default_margin"
         android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/ti_last_name"
+        app:layout_constraintBottom_toTopOf="@+id/ti_password"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/iv_avatar"
         app:layout_constraintVertical_chainStyle="packed">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/et_first_name"
+            android:id="@+id/et_login"
             style="@style/EditText"
             android:layout_width="match_parent"
             android:layout_height="@dimen/triple_default_margin"
@@ -77,7 +64,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/ti_last_name"
+        android:id="@+id/ti_password"
         style="@style/TextInputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -86,10 +73,10 @@
         app:endIconMode="password_toggle"
         app:layout_constraintBottom_toTopOf="@+id/btn_update"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ti_first_name">
+        app:layout_constraintTop_toBottomOf="@+id/ti_login">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/et_last_name"
+            android:id="@+id/et_password"
             style="@style/EditText"
             android:layout_width="match_parent"
             android:layout_height="@dimen/triple_default_margin"
@@ -110,11 +97,28 @@
         android:textAppearance="@style/ButtonText"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ti_last_name"
+        app:layout_constraintTop_toBottomOf="@+id/ti_password"
         tools:layout_editor_absoluteX="16dp" />
 
+    <TextView
+        android:id="@+id/tv_delete_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/default_margin"
+        android:layout_marginTop="@dimen/triple_default_margin"
+        android:text="@string/delete_account"
+        android:clickable="true"
+        android:focusable="true"
+        android:textColor="@color/red"
+        android:textAlignment="center"
+        android:textAppearance="@style/Subtitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_update"/>
+
+
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/сl_unauthorized"
+        android:id="@+id/cl_unauthorized"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"

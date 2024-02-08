@@ -8,4 +8,6 @@
     <color name="light_green">#4D8BF00A</color>
     <color name="grey">#A0A1A3</color>
     <color name="light_grey">#F8F8F8</color>
+    <color name="red">#BFF44336</color>
+    <color name="ic_launcher_background">#F6F6F6</color>
 </resources>

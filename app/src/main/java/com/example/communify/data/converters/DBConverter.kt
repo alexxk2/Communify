@@ -56,7 +56,7 @@ class DBConverter @Inject constructor() {
         }
     }
 
-    fun convert(contactDto: ContactDto): UserEntity {
+    fun convert(contactDto: ContactDto, uniqueKey: String): UserEntity {
         with(contactDto.user) {
             return UserEntity(
                 userId = userId,
@@ -71,8 +71,6 @@ class DBConverter @Inject constructor() {
             )
         }
     }
-
-
 
 
     fun convert(credentialsEntity: CredentialsEntity): Credentials {

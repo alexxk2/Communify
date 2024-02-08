@@ -10,6 +10,7 @@
 
     <dimen name="card_radius">30dp</dimen>
     <dimen name="usual_image_size">200dp</dimen>
+    <dimen name="usual_image_small_size">150dp</dimen>
 
 
 

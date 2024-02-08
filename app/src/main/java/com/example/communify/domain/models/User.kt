@@ -1,5 +1,9 @@
 package com.example.communify.domain.models
 
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
+@Parcelize
 data class User(
     val userId: Int = 0,
     val email: String,
@@ -10,4 +14,4 @@ data class User(
     val picture: Picture,
     val username: String,
     val uniqueKey: String
-)
+): Parcelable

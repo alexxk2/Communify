@@ -9,5 +9,5 @@ data class UserDto(
     val phone: String,
     val picture: PictureDto,
     val username: String,
-    val uniqueKey: String = ""
+    val uniqueKey: String? = ""
 )

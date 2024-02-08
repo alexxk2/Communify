@@ -65,7 +65,7 @@ dependencies {
     val gson = "2.10.1"
     val splashScreen = "1.0.1"
     val fragment = "1.6.2"
-    val tinkoffDecoro = "1.3.1"
+
 
     implementation("androidx.core:core-ktx:$coreKtx")
     implementation("androidx.appcompat:appcompat:$appCompat")
@@ -110,8 +110,11 @@ dependencies {
     implementation("com.google.dagger:hilt-android:$hilt")
     kapt("com.google.dagger:hilt-compiler:$hilt")
 
-    //phone mask
-    implementation("ru.tinkoff.decoro:decoro:$tinkoffDecoro")
+
+    //swipeRefresh
+    implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.2.0-alpha01")
+
+
 }
 
 // Allow references to generated code

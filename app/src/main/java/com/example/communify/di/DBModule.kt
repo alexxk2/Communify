@@ -2,16 +2,18 @@ package com.example.communify.di
 
 import android.content.Context
 import androidx.room.Room
-import androidx.room.RoomDatabase
 import com.example.communify.data.converters.DBConverter
 import com.example.communify.data.db.AppDatabase
 import com.example.communify.data.db.ContactsDao
 import com.example.communify.data.db.CredentialsDao
-import com.example.communify.data.db.impl.RoomStorageImpl
+import com.example.communify.data.media_storage.ImageSaver
+import com.example.communify.data.media_storage.impl.ImageSaverImpl
+import com.example.communify.data.repositories.DetailsRepositoryImpl
 import com.example.communify.data.repositories.LoginRepositoryImpl
 import com.example.communify.data.repositories.ProfileRepositoryImpl
 import com.example.communify.data.sp_storage.SPStorage
 import com.example.communify.data.sp_storage.SPStorageImpl
+import com.example.communify.domain.repositories.DetailsRepository
 import com.example.communify.domain.repositories.LoginRepository
 import com.example.communify.domain.repositories.ProfileRepository
 import dagger.Module
@@ -27,7 +29,7 @@ class DBModule {
 
     @Provides
     @Singleton
-    fun provideAppDatabase(@ApplicationContext context: Context): RoomDatabase {
+    fun provideAppDatabase(@ApplicationContext context: Context): AppDatabase {
         return Room.databaseBuilder(
             context = context,
             klass = AppDatabase::class.java,
@@ -51,16 +53,6 @@ class DBModule {
 
     @Provides
     @Singleton
-    fun provideRoomStorage(
-        contactsDao: ContactsDao,
-        credentialsDao: CredentialsDao
-    ): RoomStorageImpl {
-        return RoomStorageImpl(contactsDao, credentialsDao)
-    }
-
-
-    @Provides
-    @Singleton
     fun provideLoginRepository(
         databaseConverter: DBConverter,
         credentialsDao: CredentialsDao,
@@ -73,15 +65,29 @@ class DBModule {
     @Singleton
     fun provideProfileRepository(
         databaseConverter: DBConverter,
-        contactsDao: ContactsDao
+        credentialsDao: CredentialsDao,
+        spStorage: SPStorage,
+        imageSaver: ImageSaver
     ): ProfileRepository {
-        return ProfileRepositoryImpl(databaseConverter, contactsDao)
+        return ProfileRepositoryImpl(databaseConverter, credentialsDao, spStorage, imageSaver)
     }
 
     @Provides
     @Singleton
     fun provideSPStorage(@ApplicationContext context: Context): SPStorage {
         return SPStorageImpl(context)
+    }
+
+    @Provides
+    @Singleton
+    fun provideDetailsRepository(@ApplicationContext context: Context): DetailsRepository{
+        return DetailsRepositoryImpl(context)
+    }
+
+    @Provides
+    @Singleton
+    fun provideImageSaver(@ApplicationContext context: Context): ImageSaver{
+        return ImageSaverImpl(context)
     }
 
     companion object {

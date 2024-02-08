@@ -31,11 +31,14 @@ class ContactsRepositoryImpl @Inject constructor(
             if (resultFromApi.isEmpty()) {
                 emptyList()
             } else {
-                contactsDao.addAllContacts(
-                    resultFromApi.map {
-                        dbConverter.convert(it)
-                    }
-                )
+                if (uniqueKey.isNotEmpty()) {
+                    contactsDao.clearOldContacts(uniqueKey)
+                    contactsDao.addAllContacts(
+                        resultFromApi.map {
+                            dbConverter.convert(it,uniqueKey)
+                        }
+                    )
+                }
                 resultFromApi.map {
                     networkConverter.convert(it, uniqueKey)
                 }
@@ -67,4 +70,8 @@ class ContactsRepositoryImpl @Inject constructor(
         }
     }
 
+
+    override suspend fun deleteContacts(uniqueKey: String) {
+        contactsDao.clearOldContacts(uniqueKey)
+    }
 }
