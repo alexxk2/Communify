@@ -6,4 +6,5 @@ interface ContactsRepository {
 
     suspend fun getAllContactsApi(): List<Contact>
     suspend fun getAllContactsStorage(): List<Contact>
+    suspend fun deleteContacts(uniqueKey: String)
 }

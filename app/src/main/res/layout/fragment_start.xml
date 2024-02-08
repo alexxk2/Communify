@@ -83,6 +83,8 @@
         android:layout_marginTop="@dimen/default_margin"
         android:text="@string/continue_as_a_guest"
         android:textAlignment="center"
+        android:clickable="true"
+        android:focusable="true"
         android:textAppearance="@style/Subtitle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -11,7 +11,7 @@ class NetworkClientImpl @Inject constructor(private val randomUserApi: RandomUse
     override suspend fun getUsers(): List<ContactDto> {
         val response = randomUserApi.getUsers()
         return if (response.isSuccessful) {
-            response.body() ?: emptyList()
+            response.body()?.results ?: emptyList()
         } else {
             emptyList()
         }

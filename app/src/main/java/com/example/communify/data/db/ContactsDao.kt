@@ -16,6 +16,9 @@ interface ContactsDao {
     suspend fun addAllContacts(contacts: List<UserEntity>)
 
     @Query("DELETE FROM users")
-    suspend fun clearContacts()
+    suspend fun clearAllContacts()
+
+    @Query("DELETE FROM users WHERE unique_key=:uniqueKey")
+    suspend fun clearOldContacts(uniqueKey: String)
 
 }

@@ -19,25 +19,32 @@ class LoginRepositoryImpl @Inject constructor(
 
         val resultFromDb = credentialsDao.getCredentials(login)
 
-
-        return if (resultFromDb == null){
+        return if (resultFromDb == null) {
             AuthResult.Failure(message = "Пользователь с таким логином не найден")
-        }
-        else if(resultFromDb.password != password){
+        } else if (resultFromDb.password != password) {
 
             AuthResult.Failure(message = "Неверный пароль")
-        }
-        else{
+        } else {
+            spStorage.putUniqueUserKey(resultFromDb.uniqueKey)
             AuthResult.Success
         }
 
     }
 
     override suspend fun signIn(userCredentials: Credentials): AuthResult {
-        TODO("Not yet implemented")
+
+        val resultFromDb = credentialsDao.getCredentials(userCredentials.login)
+
+        return if (resultFromDb != null) {
+            AuthResult.Failure(message = "Пользователь с таким логином уже существует")
+        } else {
+            credentialsDao.addCredentials(databaseDBConverter.convert(userCredentials))
+            spStorage.putUniqueUserKey(userCredentials.uniqueKey)
+            AuthResult.Success
+        }
     }
 
     override suspend fun guestEntrance() {
-       spStorage.putUniqueUserKey("")
+        spStorage.putUniqueUserKey("")
     }
 }
